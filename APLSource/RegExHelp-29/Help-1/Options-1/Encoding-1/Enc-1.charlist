@@ -1,0 +1,25 @@
+[DATA]:index='Encoding ⋄ Enc ⋄ InEnc ⋄ OutEnc'
+
+# Enc
+
+This option sets both **InEnc** and **OutEnc** simultaneously, with the same given value. Any option value accepted by those options except Implied may be given. 
+
+### ResultText Option
+
+For `⎕R`, this option determines the format of the result.
+
+|**Implied**    | The output will either be a character vector or a vector of character vectors, dependent on the input document type 
+|Simple         | The output will be a character vector. Any and all line endings in the output will be represented by line ending characters within the character vector. 
+|Nested         | The output will be a vector of character vectors. Any and all line endings in the output document will be implied at the end of each character vector.   
+
+This option may only be used with `⎕R`.
+
+Examples:
+
+~~~
+      ⎕UCS ¨ ('A' ⎕R 'x') 'AB' 'CD'                
+  120 66  67 68                    
+      ⎕UCS ('A' ⎕R 'x' ⍠ 'ResultText' 'Simple') 'AB' 'CD'
+ 120 66 13 10 67 68
+~~~
+

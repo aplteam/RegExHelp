@@ -1,0 +1,12 @@
+[DATA]:index='Search pattern ⋄ Patterns'
+
+# Search Pattern
+
+A summary of the syntax of the search pattern is reproduced from the PCRE documentation. See →[#._RegExHelp.RegExHelp.Help.PCRE_Syntax_Summary]
+
+A full description is provided in PCRE Regular Expression Details.htm.
+
+There may be multiple search patterns. If more than one search pattern is specified and more than one pattern matches the same part of the input document then 
+priority is given to the pattern specified first.
+
+Note that when anchoring a search to the beginning of a line, it is essential to use `^` (`⎕UCS 94`), not `∧` (`⎕ucs 8743`).

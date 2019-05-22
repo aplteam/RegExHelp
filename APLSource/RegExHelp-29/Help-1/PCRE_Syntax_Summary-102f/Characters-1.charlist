@@ -1,0 +1,17 @@
+[DATA]:index='PCRE: Characters ⋄ Characters'
+
+# Characters
+    
+|`\\a`  |   alarm, that is, the BEL character (hex 07)
+|`\\cx` |  "control-x", where x is any ASCII character
+|`\\e`  |   escape (hex 1B)
+|`\\f`  |   form feed (hex 0C)
+|`\\n`  |   newline (hex 0A)
+|`\\r`  |   carriage return (hex 0D)
+|`\\t`  |   tab (hex 09)
+|`\\ddd`|  character with octal code ddd, or backreference
+|`\\o{ddd..}` | character with octal code ddd..
+|`\\xhh`      | character with hex code hh
+|`\\x{hhh..}` | character with hex code hhh..
+
+Note that `\\0dd` is always an octal code, and that `8` and `9` are the literal characters "8" and "9".

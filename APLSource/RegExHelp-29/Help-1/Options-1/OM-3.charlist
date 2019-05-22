@@ -1,0 +1,20 @@
+[DATA]:index='Options ⋄ OM ⋄ Match, overlapping ⋄ Overlapping matches'
+
+# OM Option
+
+Specifies whether matches may overlap.
+
+|1 | Searching continues for all patterns and then from the character following the start of the match, thus permitting overlapping matches. 
+|**0** | Searching continues from the character following the end of the match. 
+
+This option may only be used with `⎕S`. With `⎕R` searching always continues from the character following the end of the match (the characters following the 
+start of the match will have been changed). 
+
+Examples: 
+
+~~~
+      ('[0-9]+' ⎕S '\\0' ⍠ 'OM' 0) 'A 1234 5678 B'
+ 1234  5678 
+      ('[0-9]+' ⎕S '\\0' ⍠ 'OM' 1) 'A 1234 5678 B'
+ 1234  234  34  4  5678  678  78  8
+~~~

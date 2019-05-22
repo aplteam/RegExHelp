@@ -1,0 +1,12 @@
+[DATA]:index='⎕S ⋄ Search'
+
+# `⎕S`
+
+With no output stream specified, the result will be a vector containing one item for each match in the input document, of types determined by the transformation 
+performed on each match. 
+
+With an output stream specified there is no result - instead each match is appended to the stream. If any match does not end with a line ending character then the 
+line ending character specified by the EOL option is also appended. Only text may be written to the stream, which means:
+
+* When a transformation function is used, the function may only generate a character vector result. 
+* Transformation codes may not be used. 

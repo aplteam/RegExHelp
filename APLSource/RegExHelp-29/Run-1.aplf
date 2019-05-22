@@ -1,0 +1,14 @@
+ {r}←{enforceCompiling}Run folder;parms
+ enforceCompiling←{0<⎕NC ⍵:⍎⍵ ⋄ 0}'enforceCompiling'
+ parms←##.Laguntza.CreateParms''
+ parms.folderName←'RegExHelp'
+ parms.source←Help
+ parms.helpAbout←'Generated from the Dyalog RegEx help by Kai Jaeger'
+ parms.helpCaption←'RegEx Help'
+ parms.helpVersion←1⊃Version
+ parms.helpVersionDate←2⊃Version
+ :If ~0∊⍴folder
+     parms.folderName←folder
+ :EndIf
+ r←enforceCompiling ##.Laguntza.New parms
+⍝Done

@@ -1,0 +1,7 @@
+[DATA]:index='PCRE: Match point reset ⋄ Match point reset'
+
+# Match point reset
+
+|`\\K`|   reset start of match
+
+`\\K` is honoured in positive assertions, but ignored in negative ones.

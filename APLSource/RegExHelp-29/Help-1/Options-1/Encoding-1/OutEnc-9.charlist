@@ -1,0 +1,21 @@
+[DATA]:index='Encoding ⋄ OutEnc ⋄ Enc'
+
+# OutEnc Option
+
+When the output is written to a stream, the data may be encoded on one of the following forms: 
+
+|**Implied**    |  If input came from a stream then the encoding format is the same as the input stream, otherwise UTF-8 
+|UTF-8          | The data is written in UTF-8 format. 
+|UTF-16         | The data is written in UTF16 little-endian format on little-ended systems, or in UTF16 big-endian format on big-endian systems. 
+|UTF-16LE       | The data is written in UTF-16 little-endian format. 
+|UTF-16BE       | The data is written in UTF-16 big-endian format. 
+|UTF-32         | The data is written in UTF32 little-endian format on little-ended systems, or in UTF32 big-endian format on big-endian systems. 
+|UTF-32LE       | The data is written in UTF-32 little-endian format. 
+|UTF-32BE       | The data is written in UTF-32 big-endian format. 
+|ASCII          | The data is written in ASCII format. 
+|Windows-1252   | The data is written in Windows-1252 (ANSI) format. 
+|ANSI           | Same as Windows-1252 
+
+The above UTF formats may be qualified with -BOM (e.g. UTF-8-BOM) to specify that a Byte Order Mark should be written at the start of the stream or, -NOBOM 
+that it should not. For files, this is ignored if the file already contains any data. If the -BOM or -NOBOM suffix is omitted, UTF-8 defaults to UTF-8-NOBOM, 
+while the other UTF formats default to -BOM.

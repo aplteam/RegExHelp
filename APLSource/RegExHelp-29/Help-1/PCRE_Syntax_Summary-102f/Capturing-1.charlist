@@ -1,0 +1,10 @@
+[DATA]:index='PCRE: Capturing ⋄ Capturing'
+
+# Capturing
+
+|`(...)`|   capturing group
+|`(?<name>...)`| named capturing group (Perl)
+|`(?'name'...)`| named capturing group (Perl)
+|`(?P<name>...)`| named capturing group (Python)
+|`(?:...)`|   non-capturing group
+|`(?|...)`|   non-capturing group; reset group numbers for capturing groups in each alternative

@@ -1,0 +1,27 @@
+[DATA]:index='PCRE: Option settings ⋄ Option settings'
+
+# Option setting
+     
+|`(?i)`|   caseless
+|`(?J)`|   allow duplicate names
+|`(?m)`|   multiline
+|`(?s)`|   single line (dotall)
+|`(?U)`|   default ungreedy (lazy)
+|`(?x)`|   extended (ignore white space)
+|`(?-...)`|   unset option(s)
+
+The following are recognized only at the very start of a pattern or after one of the newline or `\R` options with 
+similar syntax. More than one of them may appear.
+
+|`(*LIMIT_MATCH=d)`| set the match limit to d (decimal number)
+|`(*LIMIT_RECURSION=d)`| set the recursion limit to d (decimal number)
+|`(*NO_AUTO_POSSESS)`| no auto-possessification (PCRE_NO_AUTO_POSSESS)
+|`(*NO_START_OPT)`| no start-match optimization (PCRE_NO_START_OPTIMIZE)
+|`(*UTF8)`|   set UTF-8 mode: 8-bit library (PCRE_UTF8)
+|`(*UTF16)`|  set UTF-16 mode: 16-bit library (PCRE_UTF16)
+|`(*UTF32)`|  set UTF-32 mode: 32-bit library (PCRE_UTF32)
+|`(*UTF)`|   set appropriate UTF mode for the library in use
+|`(*UCP)`|   set PCRE_UCP (use Unicode properties for \d etc)
+
+Note that LIMIT_MATCH and LIMIT_RECURSION can only reduce the value of the limits set by the caller of pcre_exec(), 
+not increase them.

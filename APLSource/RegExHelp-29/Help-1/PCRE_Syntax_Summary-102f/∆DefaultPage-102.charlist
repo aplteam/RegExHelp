@@ -1,0 +1,23 @@
+[DATA]:index='PCRE Syntax Summary'
+
+# PCRE Regular Expression Syntax Summary
+
+The following is a summary of search pattern syntax of PCRE - Perl-compatible regular expressions.
+
+The full syntax and semantics of the regular expressions that are supported by PCRE are described in the pcrepattern
+documentation. This document contains a quick-reference summary of the syntax.
+
+## Author
+
+Philip Hazel
+
+University Computing Service
+
+Cambridge CB2 3QH, England.
+
+
+## Revision
+
+Last updated: 08 January 2014
+
+Copyright (c) 1997-2014 University of Cambridge.

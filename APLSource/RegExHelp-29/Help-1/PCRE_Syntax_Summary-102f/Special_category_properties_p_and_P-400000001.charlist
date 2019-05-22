@@ -1,0 +1,11 @@
+[DATA]:index='PCRE: special category properties ⋄ Special category properties'
+
+# PCRE special category properties for `\\p` and `\\P`
+
+|`Xan`|  Alphanumeric: union of properties L and N
+|`Xps`|  POSIX space: property Z or tab, NL, VT, FF, CR
+|`Xsp`|  Perl space: property Z or tab, NL, VT, FF, CR
+|`Xuc`|  Univerally-named character: one that can be represented by a Universal Character Name
+|`Xwd`|  Perl word: property Xan or underscore
+
+Perl and POSIX space are now the same. Perl added VT to its space character set at release 5.18 and PCRE changed at release 8.34.

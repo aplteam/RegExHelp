@@ -1,0 +1,14 @@
+[DATA]:index='PCRE: Backreferences ⋄ Backreferences'
+
+# Backreferences
+     
+|`\\n`       |  reference by number (can be ambiguous)
+|`\\gn`      |  reference by number
+|`\\g{n}`    |  reference by number
+|`\\g{-n}`   |  relative reference by number
+|`\\k<name>` |  reference by name (Perl)
+|`\\k'name'` |  reference by name (Perl)
+|`\\g{name}` |  reference by name (Perl)
+|`\\k{name}` |  reference by name (.NET)
+|`(?P=name)`|  reference by name (Python)
+

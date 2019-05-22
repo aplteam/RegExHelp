@@ -1,0 +1,12 @@
+[DATA]:index='PCRE: Newline convention ⋄ Newline convention'
+
+# Newline convention
+
+These are recognized only at the very start of the pattern or after option settings with a similar syntax.
+
+|`(*CR)`|   carriage return only
+|`(*LF)`|   linefeed only
+|`(*CRLF)`|   carriage return followed by linefeed
+|`(*ANYCRLF)`|  all three of the above
+|`(*ANY)`|   any Unicode newline sequence
+

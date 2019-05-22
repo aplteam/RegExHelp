@@ -1,0 +1,26 @@
+[DATA]:index='PCRE: Character types ⋄ Character types'
+
+# Character types
+     
+|`.`|   any character except newline;<<BR>>in dotall mode, any character whatsoever
+|`\\C`|   one data unit, even in UTF mode (best avoided)
+|`\\d`|   a decimal digit
+|`\\D`|   a character that is not a decimal digit
+|`\\h`|   a horizontal white space character
+|`\\H`|   a character that is not a horizontal white space character
+|`\\N`|  a character that is not a newline
+|`\\p{xx}`|  a character with the xx property
+|`\\P{xx}`|  a character without the xx property
+|`\\R`|   a newline sequence
+|`\\s`|   a white space character
+|`\\S`|   a character that is not a white space character
+|`\\v`|   a vertical white space character
+|`\\V`|   a character that is not a vertical white space character
+|`\\w`|   a "word" character
+|`\\W`|   a "non-word" character
+|`\\X`|   a Unicode extended grapheme cluster
+
+By default, `d`, `s` and `w` match only ASCII characters, even in UTF-8 mode or in the 16- bit and 32-bit libraries. 
+However, if locale-specific matching is happening, `s` and `w` may also match characters with code points in the range 128-255. 
+If the PCRE_UCP option ("UCP" in Dyalog APL) is set, the behaviour of these escape sequences is changed to use Unicode properties 
+and they match many more characters.

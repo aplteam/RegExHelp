@@ -1,0 +1,34 @@
+[DATA]:index='Transformations ⋄ Functions'
+
+# Function
+
+The transformation function is called for each match within the input document.  The function is monadic and is passed a namespace, containing the following variables:
+
+|Block       | The entire line (line mode) or document (document mode or mixed mode) in which the match was found. 
+|BlockNum    | With line mode, the block (line) number in the source document of the start of the match. The value is origin zero. With document mode or mixed mode<<br>>the entire document is contained within one block and this value is always zero. 
+|Pattern     | The search pattern which matched. 
+|PatternNum  | The index-zero pattern number which matched. 
+|Match       | The text within Block which matched Pattern. 
+|Offsets     | A vector of one or more index-zero offsets relative to the start of Block. The first value is the offset of the entire match; any and all additional<<br>>values are the offsets of the portions of the text which matched the subpatterns, in the order of the subpatterns within Pattern. 
+|Lengths     | A vector of one or more lengths, corresponding to each value in Offset. 
+|Names       | A vector of one or more character vectors corresponding to each of the values in Offsets, specifying the names given to the subpatterns within Pattern.<<br>>The first entry (corresponding to the match) and all subpatterns with no name are included as length zero character vectors. 
+|ReplaceMode | A Boolean indicating whether the function was called by `⎕R` (value 1) or `⎕S` (value 0). 
+|TextOnly    | A Boolean indicating whether the return value from the function must be a character vector (value 1) or any value (value 0). 
+ 
+The return value from the function is used as follows:
+
+With `⎕R` the function must return a character vector. The contents of this vector are used to replace the matching text.
+
+With `⎕S` the function may return no value. If it does return a value:
+
+When output is being directed to a stream it must be a character vector. 
+
+Otherwise, it may be any value. The overall result of the derived function is the catenation of the enclosure of each returned value into a single vector. 
+The passed namespace exists over the lifetime of `⎕R` or `⎕S`; the function may therefore preserve state by creating variables in the namespace.
+
+The function may itself call `⎕R` or `⎕S`.
+
+The locations of the match within Block and subpatterns within Match are given as offsets rather than positions, i.e. the values are the number of characters preceding 
+the data, and are not affected by the Index Origin.
+
+There may be only one transformation function, regardless of the number of search patterns.

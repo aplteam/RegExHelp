@@ -1,0 +1,18 @@
+[DATA]:index='Options ⋄ Greedy ⋄ Lazy'
+
+# Greedy Option
+
+Controls whether patterns are “greedy” (and match the maximum input possible) or are not (and match the minimum). Within the pattern itself it is possible
+to specify greediness for individual elements of the pattern; this option sets the default. 
+
+|**1**  |Greedy by default. 
+|0  |Not greedy by default. 
+
+Examples:
+
+~~~
+      ('[A-Z].*[0-9]' ⎕R 'X' ⍠ 'Greedy' 1)'ABC123 DEF456'
+X
+      ('[A-Z].*[0-9]' ⎕R 'X' ⍠ 'Greedy' 0)'ABC123 DEF456'
+X23 X56
+~~~

@@ -1,0 +1,22 @@
+[DATA]:index='Encoding ⋄ InEnc ⋄ Enc'
+
+# InEnc Option
+
+This option specifies the encoding of the input stream when it cannot be determined automatically. 
+
+When the stream is read from its start, and the start of the stream contains a recognised Byte Order Mark (BOM), the encoding is taken as that specified by the BOM 
+and this option is ignored. Otherwise, the encoding is assumed to be as specified by this option.
+
+|**UTF-8**      | The stream is processed as UTF-8 data. Note that ASCII is a subset of UTF-8, so this default is also suitable for ASCII data. 
+|UTF-16         | The stream is processed as UTF16 little-endian data on little-ended systems, or as UTF16 big-endian data on big-endian systems. 
+|UTF-16LE       | The stream is processed as UTF16 little-endian data. 
+|UTF-16BE       | The stream is processed as UTF16 big-endian data. 
+|UTF-32         | The stream is processed as UTF32 little-endian data on little-ended systems, or as UTF32 big-endian data on big-endian systems. 
+|UTF-32LE       | The stream is processed as UTF32 little-endian data. 
+|UTF-32BE       | The stream is processed as UTF32 big-endian data. 
+|ASCII          | The stream is processed as ASCII data. If the stream contains any characters outside of the ASCII range then an error is produced.  
+|Windows-1252   | The stream is processed as Windows-1252 (ANSI) data. 
+|ANSI           | Same as Windows-1252 
+
+For compatibility with the OutEnc option, the above UTF formats may be qualified with -BOM (e.g. UTF-8-BOM) or -NOBOM. For input streams, the qualified and 
+unqualified options are equivalent.
