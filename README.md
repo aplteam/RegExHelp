@@ -9,6 +9,4 @@ it comes to Regular Expressions.
 In addition the help system also includes the "PCRE Syntax summary" which is coming as a seperate document in a standard Dyalog 
 implementation.
 
-![RegExHelp GUI](https://raw.githubusercontent.com/aplteam/RegExHelp/master/RegExHelp.png)
-
 ![RegExHelp GUI](RegExHelp.png?raw=true "RegExHelp GUI")
