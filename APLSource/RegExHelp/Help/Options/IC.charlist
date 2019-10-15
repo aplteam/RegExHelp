@@ -12,6 +12,8 @@ Example:
 ~~~
       ('[AEIOU]' ⎕R 'X' ⍠ 'IC' 1) 'ABCDE abcde'
 XBCDX XbcdX
+      ('[AEIOU]' ⎕R 'X' ⍠ 'IC' 0) 'ABCDE abcde'
+XBCDX abcde
       ('[AEIOU]' ⎕R 'X' ⍠ 1)'ABCDE abcde'
 XBCDX XbcdX 
 ~~~

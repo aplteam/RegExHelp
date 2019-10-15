@@ -1,6 +1,8 @@
  History
 ⍝ * 2.0.0
-⍝   * Markdown2Help replaced by Laguntza
 ⍝   * All help pages that carried originally a `\` character were wrong: somehow the `\` got lost in transition.
+⍝   * The "EOL" page was for some unknown reason empty.
+⍝   * Help page for "IC" improved by adding an example.
+⍝   * Markdown2Help replaced by Laguntza
 ⍝\\
 ⍝ For information regarding older versions see <https://github.com/aplteam/RegExHelp/releases>

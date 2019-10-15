@@ -1,0 +1,27 @@
+[DATA]:index='EOL ⋄ End-of-line'
+
+# EOL Option
+
+Sets the line ending character which is implicitly present between character vectors, when the input document is a vector of character vectors. 
+
+|CR  |Carriage Return (U+000D) 
+|LF  |Line Feed (U+000A) 
+|CRLF|Carriage Return followed by Line Feed 
+|VT  |Vertical Tab (U+000B) 
+|NEL |New Line (U+0085) 
+|FF  |Form Feed (U+000C) 
+|LS  |Line Separator (U+2028) 
+|PS  |Paragraph Separator (U+2029) 
+
+In the Classic Edition, setting a value which is not in `⎕AVU` may result in a TRANSLATION ERROR.
+
+Example:
+
+~~~
+      ('\\n' ⎕R'X' ⍠('Mode' 'D')('EOL' 'LF')) 'ABC' 'DEF'
+ ABCXDEF
+~~~
+
+Here, the implied line ending between `'ABC'` and `'DEF'` is `\\n`, not the default `\\r\\n`.
+
+
