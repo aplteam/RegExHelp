@@ -35,3 +35,23 @@ for example:
 Character sequences beginning with the backslash other than those shown are invalid. All characters other than those shown are literal values and are included in 
 the text without modification.
 
+## Bug fix in 18.0
+
+`⎕S` with a transformation pattern returns a vector of character vectors, one per match. 
+When there are no matches it should therefore return a zero-length array of character vectors, 
+but it used to erroneously return an empty character vector.
+
+~~~
+      ]box on -style=max
+
+      ('X'⎕S'&')'Y' ⍝ Old behaviour
+┌⊖┐
+│ │
+└─┘
+      ('X'⎕S'&')'Y' ⍝ Corrected behaviour:
+┌⊖────┐
+│ ┌⊖┐ │
+│ │ │ │
+│ └─┘ │
+└∊────┘
+~~~
