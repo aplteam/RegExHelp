@@ -1,6 +1,6 @@
-; This script is best executed by Launchy's "Make" utility.
+; This script is best executed by the ]RunMake user command
 
-#define MyAppVersion "2.0.0"
+#define MyAppVersion "2.1.0.46"
 #define MyAppName "RegExHelp"
 #define MyAppExeName "ViewHelp.exe"
 #define MyAppPublisher "APL Team Ltd"
