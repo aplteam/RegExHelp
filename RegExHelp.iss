@@ -1,6 +1,6 @@
 ; This script is best executed by the ]RunMake user command
 
-#define MyAppVersion "2.1.0.46"
+#define MyAppVersion "2.1.0.48"
 #define MyAppName "RegExHelp"
 #define MyAppExeName "ViewHelp.exe"
 #define MyAppPublisher "APL Team Ltd"
