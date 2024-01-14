@@ -1,8 +1,0 @@
-[DATA]:index='Memory usage'
-
-# Memory usage
-
-Blocks of data passed to the search engine are processed and stored in the workspace.
-
-Processing the input document in line mode limits the total memory requirements; 
-in particular this means that large streams can be processed without holding all the data in the workspace at the same time.

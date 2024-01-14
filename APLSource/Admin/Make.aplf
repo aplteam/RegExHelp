@@ -1,0 +1,38 @@
+ Make;pathToSource;M;A;targetPath;parms;name;F;ref;more;success;list;setupExe
+⍝ Version 3.0. ⋄ 2024-01-14 ⋄ Kai Jaeger
+ ⍝TODO⍝  ⍝TODO⍝  ⍝TODO⍝  ⍝TODO⍝  ⎕IO←0 ⋄ ⎕ML←3
+ ∘∘∘
+ pathToSource←(⎕SE.UCMD'GetAcreProjectPath'),'_Source\'
+ targetPath←'Dist\'
+ ⎕CY'C:\Users\',⎕AN,'\Documents\MyUCMDs\Maker.dws'
+ M←#.Make.Maker ⋄ A←M.APLTreeUtils ⋄ F←M.FilesAndDirs
+⍝⍝⍝⍝⍝⍝⍝⍝⍝⍝⍝
+ name←'RegExHelp'
+ ⎕WSID←'expand'F.NormalizePath(↑A.SplitPath ⎕WSID),'..\',name,'.dws'
+ F.PolishCurrentDir
+ M.RecreateFolder targetPath
+ parms←M.GetPublishConfig 1
+ M.LoadNeededAndEstablishRefs name parms
+ M.U.Assert 0≠≢⎕SE.UCMD'acre.OpenProject ',F.PWD
+ M.IncreaseBuildID'#.',name,'.',name,'.Version'
+ M.SaveProjectWorkpace name
+ parms←M.GetPublishConfig 0
+ M.EraseStuff parms.erase
+ #.RegExHelp.Laguntza←#.Laguntza
+ M.EstablishRefsInRoot #._dependencies
+ ref←1 #.RegExHelp.RegExHelp.Run targetPath
+ 2 ⎕NQ ref'Close'
+ {⍵}M.MakeWorkspace name parms.needed
+ ⎕FUNTIE ⎕FNUMS
+ (pathToSource,'Laguntza\ViewHelp.exe')M.CopyTo targetPath
+ setupExe←M.RunInno name
+ :If 1 M.U.YesOrNo'Would you like to execute "',setupExe,'" ?'
+     {}M.OS.WinExecBatch setupExe
+ :EndIf
+ F.DeleteFile targetPath,'ViewHelp.exe'
+ list←F.ListFiles targetPath
+ list←('.exe'∘≢¨2⊃¨⎕NPARTS¨list)/list
+ F.RmDir targetPath,'/CSS'
+ F.DeleteFile list
+ M.CopyToSource targetPath name
+⍝Done

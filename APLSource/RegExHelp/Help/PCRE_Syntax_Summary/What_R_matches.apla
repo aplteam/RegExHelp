@@ -1,0 +1,11 @@
+(
+ '[DATA]:index=''PCRE: What \R matches ⋄ What \R matches'''
+ ''
+ '# What `\R` matches'
+ ''
+ 'These are recognized only at the very start of the pattern or after'
+ 'option setting with a similar syntax.'
+ ''
+ '|`(*BSR_ANYCRLF)`| CR, LF, or CRLF'
+ '|`(*BSR_UNICODE)`| any Unicode newline sequence'
+)

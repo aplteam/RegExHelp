@@ -1,0 +1,12 @@
+ TransformCharListFiles;path;F;list;file1;content;content2;file2
+⍝ Transformacre charlist files to LINK's "apla" files
+ path←'C:\T\Projects\Dyalog-Tools\RegExHelp\APLSource\RegExHelp\Help\'
+ F←RegExHelp.FilesAndDirs
+ list←'recursive'F.ListFiles path,'*.charlist'
+ :For file1 :In list
+     content←⊃⎕NGET file1 1
+     content2←⎕SE.Dyalog.Array.Serialise content
+     file2←{{(⊃,/2↑⍵),'.apla'}⎕NPARTS ⍵}file1
+     (⊂content2)⎕NPUT file2 1
+ :EndFor
+⍝Done

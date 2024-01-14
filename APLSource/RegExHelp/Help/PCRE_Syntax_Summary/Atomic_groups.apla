@@ -1,0 +1,7 @@
+(
+ '[DATA]:index=''PCRE: Atomic groups ⋄ Atomic groups'''
+ ''
+ '# Atomic groups'
+ '    '
+ '|`(?>...)`|   atomic, non-capturing group'
+)

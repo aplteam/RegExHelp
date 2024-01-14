@@ -1,0 +1,4 @@
+aplteam-MarkAPL-12.1.0
+aplteam-FilesAndDirs-5.7.0
+aplteam-Laguntza-6.1.0
+aplteam-APLGUI-0.32.0

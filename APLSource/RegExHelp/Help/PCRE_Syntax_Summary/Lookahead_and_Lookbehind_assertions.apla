@@ -1,0 +1,12 @@
+(
+ '[DATA]:index=''PCRE: Lookahead assertions ⋄ PCRE: Lookbehind assertions ⋄ Lookahead assertions ⋄ Lookbehind assertions'''
+ ''
+ '# Lookahead and lookbehind assertions'
+ ''
+ '|`(?=...)`|   positive look ahead'
+ '|`(?!...)`|   negative look ahead'
+ '|`(?<=...)`|  positive look behind'
+ '|`(?<!...)`|  negative look behind'
+ ''
+ 'Each top-level branch of a look behind must be of a fixed length.'
+)

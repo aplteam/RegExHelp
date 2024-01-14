@@ -1,0 +1,14 @@
+(
+ '[DATA]:index=''PCRE: Anchors and simple assertions ⋄ Anchors and simple assertions'''
+ ''
+ '# Anchors and simple assertions'
+ ''
+ '|`\\b`|   word boundary'
+ '|`\\B`|   not a word boundary'
+ '|`^`|   start of subject<<br>>also after internal newline in multiline mode'
+ '|`\\A`|   start of subject'
+ '|`$`|   end of subject<<br>>also before newline at end of subject<<br>>also before internal newline in multiline mode'
+ '|`\\Z`|   end of subject<<br>>also before newline at end of subject'
+ '|`\\z`|   end of subject'
+ '|`\\G`|   first matching position in subject'
+)

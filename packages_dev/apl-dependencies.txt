@@ -1,0 +1,3 @@
+aplteam-Tester2-3.6.0
+aplteam-CodeCoverage-0.10.5
+aplteam-CommTools-1.7.1

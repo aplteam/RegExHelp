@@ -1,0 +1,7 @@
+(
+ '[DATA]:index=''PCRE: Comments ⋄ Comments'''
+ ''
+ '# Comments'
+ '   '
+ '|`(?#....)`|  comment (not nestable)'
+)
