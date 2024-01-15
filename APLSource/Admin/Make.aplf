@@ -1,4 +1,4 @@
- Make;M;A;targetPath;name;F;more;success;C;MakeHelpers;setupExe;ref
+ Make;M;A;targetPath;name;F;more;success;C;MakeHelpers;setupExe;ref;ref2
 ⍝ Version 3.0. ⋄ 2024-01-15 ⋄ Kai Jaeger
  C←##.TestCases.CommTools
  :If C.YesOrNo'Sure you want to re-build RegExHelp?'
@@ -9,8 +9,8 @@
      M.RecreateFolder targetPath
      M.IncreaseBuildIDInFunction'#.RegExHelp.RegExHelp.Version'
      ref←1 #.RegExHelp.RegExHelp.Run targetPath
-     ⎕DL 1
-     ⎕NQ ref'Close'
+     ref2←⍎'MyMsgBox'⎕WC'MsgBox'('Style' 'Info')('Caption' 'Make RegExHelp')('Text' 'Close this message box and the Help GUI')
+     ⎕DQ ref ref2
      (##.Laguntza.##.TatinVars.GetFullPath2AssetsFolder,'\*')M.CopyTo targetPath
      M.UpdateVersionNumberInInno_ISS(##.CiderConfig.HOME,'\RegExHelp.iss')(2⊃##.RegExHelp.Version)
      :If 0=#.⎕NC'Inno'

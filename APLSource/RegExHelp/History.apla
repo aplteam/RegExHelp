@@ -1,4 +1,6 @@
 (
+ '* 2.2.1'
+ '  * Package `Laguntza` required an update'
  '* 2.2.0'
  '  * Rather than an acre project, RegExHelp is now a Cider project'
  '  * It depends on Tatin packages now'

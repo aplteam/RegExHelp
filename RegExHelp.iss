@@ -1,4 +1,4 @@
-#define MyAppVersion "2.2.0"
+#define MyAppVersion "2.2.1"
 #define MyAppName "RegExHelp"
 #define MyAppExeName "ViewHelp.exe"
 #define MyAppPublisher "Kai Jaeger"
