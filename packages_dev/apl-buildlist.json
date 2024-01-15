@@ -1,6 +1,7 @@
 {
   packageID: [
     "aplteam-Tester2-3.6.0",
+    "aplteam-OS-3.1.1",
     "aplteam-CommTools-1.7.1",
     "aplteam-CodeCoverage-0.10.5",
     "aplteam-IniFiles-5.0.3",
@@ -10,10 +11,12 @@
     1,
     1,
     1,
+    1,
     0,
     0,
   ],
   url: [
+    "https://tatin.dev/",
     "https://tatin.dev/",
     "https://tatin.dev/",
     "https://tatin.dev/",

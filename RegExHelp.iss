@@ -1,9 +1,7 @@
-; This script is best executed by the ]RunMake user command
-
-#define MyAppVersion "2.1.0.48"
+#define MyAppVersion "2.1.0"
 #define MyAppName "RegExHelp"
 #define MyAppExeName "ViewHelp.exe"
-#define MyAppPublisher "APL Team Ltd"
+#define MyAppPublisher "Kai Jaeger"
 #define MyAppURL "https://github.com/aplteam/RegExHelp"
 #define MyAppIcoName "help.ico"
 #define MyBlank " "
