@@ -1,5 +1,7 @@
  {r}←{enforceCompiling}Run folder;parms
  enforceCompiling←{0<⎕NC ⍵:⍎⍵ ⋄ 0}'enforceCompiling'
+ ∆WSID←⎕WSID
+ ∆PWD←1 ⎕NPARTS''
  parms←##.Laguntza.CreateParms''
  parms.folderName←'RegExHelp'
  parms.source←Help

@@ -1,6 +1,8 @@
 (
- '* 2.2.1'
- '  * Package `Laguntza` required an update'
+ '* 2.2.2 ⋄ 2024-01-26'
+ '  * Bug fix: shortcuts (links) worked only with a working directory pointing to the folder with the EXE'
+ '* 2.2.1 ⋄ 2024-01-22'
+ '  * 2.2.0 did not work due to a bug in Laguntza'
  '* 2.2.0'
  '  * Rather than an acre project, RegExHelp is now a Cider project'
  '  * It depends on Tatin packages now'
