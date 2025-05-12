@@ -3,7 +3,7 @@
  ''
  '# Quoting'
  ''
- '|`\\x`       | where x is non-alphanumeric is a literal x'
- '|`\\Q...\\E`  | treat enclosed characters as literal'
+ '|`\x`       | where x is non-alphanumeric is a literal x'
+ '|`\Q...\E`  | treat enclosed characters as literal'
  ''
 )

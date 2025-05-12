@@ -5,7 +5,7 @@
  ''
  'Dyalog APL comes with a single page in the help file regarding Regular Expressions. This makes it really hard to use.'
  ''
- 'RegEx Help provided precisely the same kind of information but split into several pages, accessible via table-of-contents'
+ 'RegEx Help provides precisely the same kind of information but split into several pages, accessible via table-of-contents'
  'displayed as a tree structure. It also offers a powerful search feature and an index.'
  ''
  'Additionally all the information contained in the separate document "PCRE Syntax Summary" is included in the help as well.'

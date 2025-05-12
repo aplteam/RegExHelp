@@ -12,6 +12,6 @@
  'It is possible to save a workspace with an active `⎕R` or `⎕S` on the stack and execution can continue when the workspace is reloaded with the same interpreter version. '
  'Later versions of the interpreter may not remain compatible and may signal a DOMAIN ERROR with explanatory message in the status window if it is unable to continue execution.'
  ''
- 'PCRE has a buffer length limit of 231 bytes (2GB). UTF-8 encodes each character using between 1 and 6 bytes (typically 1 or 3). In the very worst case, where every '
+ 'PCRE has a buffer length limit of 2^31 bytes (2GB). UTF-8 encodes each character using between 1 and 6 bytes (typically 1 or 3). In the very worst case, where every '
  'character is encoded in 6 bytes, the maximum block length which can be searched would be 357,913,940 characters.'
 )

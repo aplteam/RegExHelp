@@ -1,7 +1,7 @@
 (
  '[DATA]:index=''Transformations ⋄ Codes'''
  ''
- '# Codes                               '
+ '# Transformation codes                               '
  ''
  'The transformation codes are a numeric scalar or vector. Transformation codes may only be used with `⎕S`. For each match in the input document, a numeric scalar '
  'or vector of the same shape as the transformation codes is created, with the codes replaced with values as follows:'

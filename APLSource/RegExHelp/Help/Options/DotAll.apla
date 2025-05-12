@@ -10,7 +10,7 @@
  ''
  'This option is invalid in line mode, because line endings are stripped from the input document.'
  ''
- 'Example:'
+ '## Examples'
  ''
  '~~~'
  '      (''.'' ⎕R ''X'' ⍠''Mode'' ''D'') ''ABC'' ''DEF'''

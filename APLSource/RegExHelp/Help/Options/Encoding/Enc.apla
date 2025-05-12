@@ -15,7 +15,7 @@
  ''
  'This option may only be used with `⎕R`.'
  ''
- 'Examples:'
+ '## Examples'
  ''
  '~~~'
  '      ⎕UCS ¨ (''A'' ⎕R ''x'') ''AB'' ''CD''                '

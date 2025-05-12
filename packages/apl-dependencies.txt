@@ -1,5 +1,5 @@
-aplteam-MarkAPL-13.1.0
-aplteam-FilesAndDirs-5.8.1
-aplteam-APLGUI-0.33.0
-aplteam-APLTreeUtils2-1.4.0
-aplteam-Laguntza-6.3.0
+aplteam-MarkAPL-14.0.0
+aplteam-FilesAndDirs-7.0.0
+aplteam-APLGUI-0.34.0
+aplteam-APLTreeUtils2-1.4.1
+aplteam-Laguntza-7.0.1

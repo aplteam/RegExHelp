@@ -8,7 +8,7 @@
  '|1 | Matches are not case sensitive. '
  '|**0** | Matches are case sensitive. '
  ''
- 'Example:'
+ '## Examples'
  ''
  '~~~'
  '      (''[AEIOU]'' ⎕R ''X'' ⍠ ''IC'' 1) ''ABCDE abcde'''

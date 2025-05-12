@@ -13,7 +13,7 @@
  '|1 | Regular expression matching is applied |'
  '|0 | regular expression matching is disabled| '
  ''
- '**Examples**'
+ '## Examples'
  ''
  '~~~'
  '      STR'

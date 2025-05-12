@@ -14,7 +14,7 @@
  'the start, and there is a valid Byte Order Mark (BOM) at the start of it, the data encoding is determined by this BOM. Otherwise, data in the file is assumed to be '
  'encoded as specified by the InEnc option.'
  ''
- 'Hint: once a native file has been read to the end by `⎕R` or `⎕S` it is possible to reset the file position to the start so that it may be read again using:'
+ 'Hint: once a native file has been read to the end by `⎕R` or `⎕S`, it is possible to reset the file position to the start so that it may be read again using:'
  ''
  '~~~'
  '      {} ⎕NREAD tienum 82 0 0'
@@ -40,7 +40,7 @@
  'The implicit line ending character may be set using the EOL option. Explicit line ending characters may also be replaced by this character - so that all line '
  'endings are normalised - using the NEOL option.'
  ''
- 'The input document may be processed in line mode, document mode or mixed mode. In document mode and mixed mode, the entire input document, line ending characters '
+ 'The input document may be processed in **line** mode, **document** mode or **mixed** mode. In document mode and mixed mode, the entire input document, line ending characters '
  'included, is passed to the search engine; in line mode the document is split on line endings and passed to the search engine in sections without the line ending '
  'characters. The choice of mode affects both memory usage and behaviour, as documented in the section ‘Line, document and mixed modes’.'
 )

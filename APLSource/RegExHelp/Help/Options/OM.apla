@@ -11,7 +11,7 @@
  'This option may only be used with `⎕S`. With `⎕R` searching always continues from the character following the end of the match (the characters following the '
  'start of the match will have been changed). '
  ''
- 'Examples: '
+ '## Examples '
  ''
  '~~~'
  '      (''[0-9]+'' ⎕S ''\\0'' ⍠ ''OM'' 0) ''A 1234 5678 B'''

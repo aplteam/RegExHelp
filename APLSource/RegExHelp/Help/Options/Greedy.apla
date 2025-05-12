@@ -9,7 +9,7 @@
  '|**1**  |Greedy by default. '
  '|0  |Not greedy by default. '
  ''
- 'Examples:'
+ '## Examples'
  ''
  '~~~'
  '      (''[A-Z].*[0-9]'' ⎕R ''X'' ⍠ ''Greedy'' 1)''ABC123 DEF456'''

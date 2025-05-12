@@ -3,7 +3,7 @@
  ''
  '# Match point reset'
  ''
- '|`\\K`|   reset start of match'
+ '|`\K`|   reset start of match'
  ''
- '`\\K` is honoured in positive assertions, but ignored in negative ones.'
+ '`\K` is honoured in positive assertions, but ignored in negative ones.'
 )
