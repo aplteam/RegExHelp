@@ -1,0 +1,7 @@
+ GetFileVersionFrom←{
+     tno←filename ⎕NTIE 0
+     data←⎕NREAD tno,80 ¯1 0
+     _←⎕NUNTIE tno
+     data←(⊃⍸'"Laguntza.dcf"'⍷data)↓data
+     {⍵↑⍨¯1+⍵⍳'"'}'version: "'{((¯1+≢⍺)+⊃⍸⍺⍷⍵)↓⍵}data
+ }

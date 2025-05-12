@@ -2,3 +2,5 @@ aplteam-Tester2-4.0.0
 aplteam-CodeCoverage-0.10.7
 aplteam-CommTools-2.0.1
 aplteam-OS-4.0.0
+aplteam-GitHubAPIv3-2.1.0
+dyalog-HttpCommand-5.9.0

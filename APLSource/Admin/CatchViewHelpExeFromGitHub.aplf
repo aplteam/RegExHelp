@@ -1,0 +1,24 @@
+ r←CatchViewHelpExeFromGitHub targetPath;GH;allVersions;filename;tag;url;tno;buff;fileObj;version;q
+ r←1
+ filename←targetPath,'ViewHelp.exe'
+ GH←⎕NEW ##.TestCases.GitHubAPIv3(,⊂'aplteam')
+ allVersions←GH.GetAllReleases'Laguntza'
+ tag←⊃allVersions
+ :If 0=F.IsFile filename
+     url←'https://github.com/aplteam/Laguntza/releases/download/',tag,'/ViewHelp.exe'
+     buff←##.TestCases.HttpCommand.Get url
+     'Something went wrong'Assert 200=buff.HttpStatus
+     tno←filename ⎕NCREATE 0
+     buff.Data ⎕NAPPEND tno 80
+     ⎕NUNTIE tno
+ :Else
+     version←{⍵↑⍨¯1+⍵⍳'+'}GetFileVersionFrom filename
+     :If version≢1↓tag
+         q←'Currently saved version: ',version,⎕UCS 13
+         q,←'Best version available on GitHub: ',(1↓tag),⎕UCS 13
+         q,←'Download version ',(1↓tag),'?'
+     :AndIf 0=1 ##.TestCases.CommTools.YesOrNo q
+         r←0
+     :EndIf
+ :EndIf
+⍝Done

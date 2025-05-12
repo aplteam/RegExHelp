@@ -1,0 +1,11 @@
+ {r}←Cleanup folder;F;list
+ r←0
+ F←##.FilesAndDirs
+ :If 0<≢list←('recurse' 2)F.ListDirs2 folder
+     {}F.RmDirByForce¨list
+ :EndIf
+ :If 0<≢list←('recurse' 2)F.ListFiles2 folder
+ :AndIf 0<≢list←((≢folder)↓¨list)~⊂'ViewHelp.exe'
+     F.DeleteFile folder∘,¨list
+ :EndIf
+⍝Done

@@ -1,13 +1,47 @@
- Make;M;A;targetPath;name;F;more;success;C;MakeHelpers;setupExe;ref;fnums
-⍝ Version 3.0.0 ⋄ 2024-01-19 ⋄ Kai Jaeger
- C←##.TestCases.CommTools
- :If C.YesOrNo'Sure you want to re-build RegExHelp?'
+ {r}←Make flag;answer;M;noOf;q;C;targetPath;F;A;name;fnums;ref;setupExe
+⍝ Version 3.1.0 ⋄ 2025-05-12 ⋄ Kai Jaeger
+ r←0
+ :If flag
+     :Section  ⍝ Establish ref to "MakeHelpers"
+         :If 0=⎕NC'refToMakeHelpers'
+             :If 9=⎕SE.⎕NC'MakeHelpers'
+                 flag←¯1
+                 :Repeat
+                     answer←⍞,0/⍞←q←'Do you want to use "MakeHelpers" ',⎕SE.MakeHelpers.Version,' in ⎕SE (n=re-load) (Y/n)?'
+                     answer←(≢q)↓answer
+                     :If 0=≢answer
+                     :OrIf 'Yy'∊⍨¯1↑answer
+                         flag←1
+                     :ElseIf 'Nn'∊⍨¯1↑answer
+                         flag←0
+                     :EndIf
+                 :Until flag∊0 1
+                 :If flag
+                     M←⎕SE.MakeHelpers
+                 :Else
+                     noOf←⎕SE.Tatin.LoadPackages'MakeHelpers'⎕SE
+                     'Could not load the package "MakeHelpers"'⎕SIGNAL 6/⍨0=noOf
+                     M←⎕SE.MakeHelpers
+                 :EndIf
+             :Else
+                 noOf←⎕SE.Tatin.LoadPackages'MakeHelpers'⎕SE
+                 'Could not load the package "MakeHelpers"'⎕SIGNAL 6/⍨0=noOf
+                 M←⎕SE.MakeHelpers
+             :EndIf
+         :Else
+             M←refToMakeHelpers
+         :EndIf
+     :EndSection
+     ⎕←'Using "MakeHelpers" version ',⎕SE.MakeHelpers.Version
+     C←##.CiderConfig
      targetPath←##.CiderConfig.HOME,'\Dist\'
-     M←⎕SE.MakeHelpers ⋄ A←##.APLTreeUtils2 ⋄ F←##.FilesAndDirs
+     A←##.APLTreeUtils2 ⋄ F←##.FilesAndDirs
      name←'RegExHelp'
 ⍝ -------------------------------------------------------------------------
-     M.RecreateFolder targetPath
-     M.IncreaseBuildIDInFunction'#.RegExHelp.RegExHelp.Version'
+     ⎕FUNTIE ⎕FNUMS
+     Cleanup targetPath
+     ##.⎕ED'RegExHelp.Version'
+     M.IncreaseBuildIDInFunction'#.',name,'.',name,'.Version'
      fnums←⎕FNUMS
      ref←1 #.RegExHelp.RegExHelp.Run targetPath
      ⎕DL 1
@@ -15,17 +49,18 @@
      ⎕EX'ref'
      {}F.RmDir targetPath,'Assets'
      ##.Laguntza.##.TatinVars.GetFullPath2AssetsFolder M.CopyTo targetPath
-     (##.Laguntza.##.TatinVars.HOME,'/ViewHelp.exe')M.CopyTo targetPath
-     M.UpdateVersionNumberInInno_ISS(##.CiderConfig.HOME,'\RegExHelp.iss')(1⊃##.RegExHelp.Version)
-     F.DeleteFile targetPath,'/Assets/ViewHelp.exe'
-     :If 0=#.⎕NC'Inno'
-         {}⎕SE.Tatin.LoadPackages'aplteam-Inno'#
-     :EndIf
-     ⎕FUNTIE ⎕FNUMS~fnums
-     setupExe←##.CiderConfig.HOME #.Inno.Run name
-     M.RemoveStuffButSetupExe targetPath
-     :If 1 C.YesOrNo'Would you like to execute "',setupExe,'" ?'
-         {}##.TestCases.OS.WinExecBatch setupExe
+     :If 0=CatchViewHelpExeFromGitHub targetPath
+         ⎕←'Cancelled by user'
+     :Else
+         M.UpdateVersionNumberInInno_ISS(##.CiderConfig.HOME,'\RegExHelp.iss')(1⊃##.RegExHelp.Version)
+         :If 0=#.⎕NC'Inno'
+             {}⎕SE.Tatin.LoadPackages'aplteam-Inno'#
+         :EndIf
+         ⎕FUNTIE ⎕FNUMS~fnums
+         setupExe←##.CiderConfig.HOME #.Inno.Run name
+         M.RemoveStuffButSetupExe targetPath
+         :If 1 ##.TestCases.CommTools.YesOrNo'Would you like to execute "',setupExe,'" ?'
+             {}##.TestCases.OS.WinExecBatch setupExe
+         :EndIf
      :EndIf
  :EndIf
-⍝Done

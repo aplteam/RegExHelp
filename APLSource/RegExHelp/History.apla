@@ -1,6 +1,6 @@
 (
- '* 2.3.0 ⋄ 2025-05-06'
- '  * `Version` changed: returns a char vector now'
+ '* 2.3.0 ⋄ 2025-05-12'
+ '  * Help polished: mistakes corrected and many improvements'
  '  * Packages updated'
  '* 2.2.2 ⋄ 2024-01-26'
  '  * Bug fix: shortcuts (links) worked only with a working directory pointing to the folder with the EXE'
